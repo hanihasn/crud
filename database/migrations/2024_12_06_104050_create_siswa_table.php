@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('siswas', function (Blueprint $table) {
+        Schema::create('siswa', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_depan');
-            $table->string('nama_belakang');
-            $table->string('Jenis_Kelamin');
-            $table->string('agama');
-            $table->text('alamat');
+            $table->string('nama');
+            $table->string('nis')->unique();
+            $table->string('kelas');
             $table->timestamps();
         });
     }
